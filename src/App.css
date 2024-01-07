@@ -1,3 +1,8 @@
+.app{
+  text-align: center;
+  background-color: #eee;
+  padding: 1.5rem 0;
+}
 div {
   font-family: 'Arial', sans-serif;
   margin-bottom: 10px;
@@ -6,6 +11,10 @@ div {
 label {
   margin-right: 5px;
   font-weight: bold;
+}
+
+label:nth-child(3){
+
 }
 
 input[type="text"] {
@@ -22,6 +31,7 @@ select {
   padding: 8px;
   background: white;
   cursor: pointer;
+  /* margin-inline: 1rem; */
 }
 
 option {
@@ -30,6 +40,7 @@ option {
 }
 
 p.resault {
+  margin-top: 1.2rem;
   font-size: 1.2em;
   color: #333;
 }
@@ -37,4 +48,12 @@ p.resault {
 div > div {
   padding-top: 10px;
   margin-top: 10px;
+}
+.selectBox-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selectBox{
+  margin: 0 1.2rem;
 }
