@@ -13,10 +13,6 @@ label {
   font-weight: bold;
 }
 
-label:nth-child(3){
-
-}
-
 input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 4px;

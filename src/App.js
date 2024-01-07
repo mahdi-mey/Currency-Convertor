@@ -5,15 +5,17 @@ function App() {
   const [ammount, setAmmount] = useState(1)
   const [fromCur, setFromCur] = useState('EUR')
   const [toCur, setToCur] = useState('USD')
+  const [resault, setResault] = useState(null)
 
   useEffect(function(){ 
     async function fetchData(){
-      let data = await fetch('https://api.frankfurter.app/latest?amount=100&from=EUR&to=USD') 
-      let res  = await data.json()
-      console.log(res);
+      let res = await fetch(`https://api.frankfurter.app/latest?amount=${ammount}&from=${fromCur}&to=${toCur}`) 
+      let data  = await res.json()
+      // console.log(data.rates[toCur]);
+      setResault(data.rates[toCur])
     }
     fetchData()
-  }, [])
+  }, [ammount, fromCur, toCur])
 
   return (
     <div className='app'>
@@ -39,7 +41,7 @@ function App() {
               </select>
           </div>
         </div>
-      <p className='resault'>61300</p>
+      <p className='resault'>{resault} {toCur}</p>
     </div>
   );
 }
