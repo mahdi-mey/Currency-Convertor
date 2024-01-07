@@ -5,14 +5,16 @@ function App() {
   const [ammount, setAmmount] = useState(1)
   const [fromCur, setFromCur] = useState('EUR')
   const [toCur, setToCur] = useState('USD')
-  const [resault, setResault] = useState(null)
+  const [resault, setResault] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(function(){ 
     async function fetchData(){
+      setIsLoading(true)
       let res = await fetch(`https://api.frankfurter.app/latest?amount=${ammount}&from=${fromCur}&to=${toCur}`) 
       let data  = await res.json()
-      // console.log(data.rates[toCur]);
       setResault(data.rates[toCur])
+      setIsLoading(false)
     }
     fetchData()
   }, [ammount, fromCur, toCur])
@@ -41,7 +43,7 @@ function App() {
               </select>
           </div>
         </div>
-      <p className='resault'>{resault} {toCur}</p>
+      {/* <p className='resault'>{resault} {toCur}</p> */}
     </div>
   );
 }
