@@ -1,0 +1,40 @@
+div {
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+select {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+option {
+  font-weight: normal;
+  background: #f8f8f8;
+}
+
+p.resault {
+  font-size: 1.2em;
+  color: #333;
+}
+
+div > div {
+  padding-top: 10px;
+  margin-top: 10px;
+}
