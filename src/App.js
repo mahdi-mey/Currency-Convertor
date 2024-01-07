@@ -22,28 +22,28 @@ function App() {
   return (
     <div className='app'>
       <label>Ammount</label>
-      <input type="text" value={ammount} onChange={(e) => setAmmount(Number(e.target.value))} />
+      <input type="text" value={ammount} onChange={(e) => setAmmount(Number(e.target.value))} disabled={isLoading}/>
         <div className='selectBox-container'>
           <div className='selectBox'>
             <label>From</label>
-              <select value={fromCur} onChange={(e) => setFromCur(e.target.value)}>
+              <select value={fromCur} onChange={(e) => setFromCur(e.target.value)} disabled={isLoading}>
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="CAD">CAD</option>
-                <option value="INR">INR</option>
+                <option value="INR">indian rupi</option>
               </select>
           </div>
           <div className='selectBox'>
             <label>To</label>
-            <select value={toCur} onChange={(e) => setToCur(e.target.value)}>
+            <select value={toCur} onChange={(e) => setToCur(e.target.value)} disabled={isLoading}>
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="CAD">CAD</option>
-                <option value="INR">INR</option>
+                <option value="INR">indian rupi</option>
               </select>
           </div>
         </div>
-      {/* <p className='resault'>{resault} {toCur}</p> */}
+      <p className='resault'>{resault} {toCur}</p>
     </div>
   );
 }
