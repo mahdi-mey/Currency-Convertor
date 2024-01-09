@@ -16,6 +16,7 @@ function App() {
       setResault(data.rates[toCur])
       setIsLoading(false)
     }
+    if(fromCur === toCur) return setResault(ammount)
     fetchData()
   }, [ammount, fromCur, toCur])
 
@@ -30,7 +31,7 @@ function App() {
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="CAD">CAD</option>
-                <option value="INR">indian rupi</option>
+                <option value="INR">INR</option>
               </select>
           </div>
           <div className='selectBox'>
@@ -39,7 +40,7 @@ function App() {
                 <option value="USD">USD</option>
                 <option value="EUR">EUR</option>
                 <option value="CAD">CAD</option>
-                <option value="INR">indian rupi</option>
+                <option value="INR">INR</option>
               </select>
           </div>
         </div>
